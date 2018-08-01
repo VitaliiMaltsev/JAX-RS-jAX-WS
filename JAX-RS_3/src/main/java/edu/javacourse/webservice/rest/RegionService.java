@@ -31,11 +31,10 @@ public class RegionService {
 
 
     @GET
-    @Path("/id/{id}")
+    @Path("/{id}")
     @Produces(MediaType.APPLICATION_XML)
     public Region getRegion(@PathParam("id") String id) {
-        Region region = regions.get(id);
-        return region != null ? region : null;
+        return regions.get(id);
     }
 
     @GET
@@ -66,7 +65,7 @@ public class RegionService {
     }
 
     @DELETE
-    @Path("/delete/{id}")
+    @Path("/{id}")
     @Produces(MediaType.APPLICATION_XML)
     public Collection<Region> removeCity(@PathParam("id") String id) throws URISyntaxException {
         regions.remove(id);
