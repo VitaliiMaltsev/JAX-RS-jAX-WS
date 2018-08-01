@@ -5,6 +5,8 @@
 </head>
 <body>
 
+xfn
+
 <form action="rest/hello/add" method="post">
     <p>
         Name : <input type="text" name="name" />
