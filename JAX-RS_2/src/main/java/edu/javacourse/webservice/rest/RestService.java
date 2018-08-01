@@ -16,7 +16,7 @@ public class RestService {
 
     @GET
     @Path("/file")
-    @Produces("text/plain")
+    @Produces("text/plain")  //rest/get/file
     public Response getFile() throws URISyntaxException {
 
         File file = new File(getClass().getResource("textFile.txt").toURI());
